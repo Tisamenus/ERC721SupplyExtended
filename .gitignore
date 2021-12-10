@@ -4,3 +4,4 @@ artifacts
 build
 dist
 .env
+yarn-error.log
