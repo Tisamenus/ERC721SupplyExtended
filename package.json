@@ -1,0 +1,47 @@
+{
+  "name": "hardhat-template",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "eslint": "eslint --ext .js --ignore-path .gitignore .",
+    "prettier:check": "prettier --check . --config .prettierrc",
+    "prettier:fix": "prettier --write . --config .prettierrc",
+    "lint": "yarn eslint && yarn prettier:check",
+    "add:oz": "node scripts/addPackage.js @openzeppelin/contracts",
+    "update": "node scripts/updateAllPackages.js",
+    "update:all": "node scripts/updateAllPackages.js +prod",
+    "test:all": "yarn hardhat test",
+    "test": "yarn test:all",
+    "test:all:f": "yarn prettier:fix && yarn test && yarn lint",
+    "test:f": "yarn prettier:fix && yarn test",
+    "clean": "yarn prettier:fix && yarn lint",
+    "compile": "yarn prettier:fix && yarn hardhat compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tisamenus/hardhat-template.git"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^2.1.6",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.3.4",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "^5.5.1",
+    "hardhat": "2.6.0",
+    "hardhat-contract-sizer": "^2.0.3",
+    "hardhat-log-remover": "^2.0.2",
+    "hardhat-spdx-license-identifier": "^2.0.3",
+    "hardhat-storage-layout": "^0.1.6",
+    "prettier": "^2.3.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.17",
+    "solhint-plugin-prettier": "^0.0.5"
+  }
+}
